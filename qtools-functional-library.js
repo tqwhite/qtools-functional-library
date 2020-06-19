@@ -34,9 +34,9 @@ const commonFunctions = {
 			});
 		});
 
-		const test = ({ logErrors = false }) => {
+		const test = (args) => {
 			const tmp = testList.reduce((passingTests, testItem, inx) => {
-				return passingTests && testItem.test({ logErrors, methodName:testItem.methodName }) ? true : false;
+				return passingTests && testItem.test(args) ? true : false; //calls test method passed from functional module
 			}, true);
 			return tmp;
 		};
@@ -221,11 +221,10 @@ const helpActual = docList => (queryString = '') => {
 	return outList;
 };
 
-const testActual = testList => (args = {}) => {
-	const { logErrors = false } = args;
+const testActual = testList => (args) => {
 	return testList.reduce((result, test) => {
 		if (typeof test == 'function') {
-			result = test({ logErrors }) && result;
+			result = test(args) && result; //executes the framework testItem.test() above
 		}
 		return result;
 	}, true);

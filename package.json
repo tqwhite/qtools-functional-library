@@ -4,7 +4,7 @@
   "description": "Useful additions to JS prototypes to facilliate chainable, functional (mostly) style. Also make life more convenient.\"",
   "main": "qtools-functional-library.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js -verbose -logErrors"
   },
   "repository": {
     "type": "git",
