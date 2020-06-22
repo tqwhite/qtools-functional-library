@@ -33,13 +33,27 @@ const commonFunctions = {
 				}
 			});
 		});
-
-		const test = (args) => {
+		const testActual=methodName=>(args) => {
 			const tmp = testList.reduce((passingTests, testItem, inx) => {
-				return passingTests && testItem.test(args) ? true : false; //calls test method passed from functional module
+
+				if (typeof(args.methodList)!='undefined' && args.methodList.length>0 && !args.methodList.includes(methodName)){
+					return true;
+				}
+
+				const result=passingTests && testItem.test(args) ? true : false;
+
+
+				if (args.listTests){
+					console.log(`${methodName} ${result?'passed':'failed'}`);
+				}
+				
+				return result //calls test method passed from functional module
 			}, true);
 			return tmp;
 		};
+		
+		
+		const test = testActual(methodName);
 
 		return {
 			methods,

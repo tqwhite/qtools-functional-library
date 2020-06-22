@@ -4,15 +4,22 @@
 const qt = require('qtools-functional-library');
 
 //console.dir(qt.help());
-
-console.dir({"process.argv [test.js.]":process.argv});
-
-
 const verbose=process.argv.filter(item=>item.match(/verbose/i))[0]?true:false
 const logErrors=process.argv.filter(item=>item.match(/logErrors/i))[0]?true:false
+const listTests=process.argv.filter(item=>item.match(/listTests/i))[0]?true:false
 
 
-const result=qt.test({logErrors, verbose});
+const methodList=process.argv
+	.qtClone() //create a deep copy so changes can't leak back to the source
+	.filter(item=>item.match(/^--methodList/)) //['--methodList=qtClone,qtToString,qtPop']
+	.qtGetSurePath('[0]', '') //'--methodList=qtClone,qtToString,qtPop'
+	.split('=') //['--methodList', 'qtClone,qtToString,qtPop']
+	.qtGetSurePath('[1]', '') //'qtClone,qtToString,qtPop'
+	.split(',') //['qtClone', 'qtToString', 'qtPop']
+	.filter(item=>item.length>0) //eliminates the empty if default
+
+
+const result=qt.test({logErrors, verbose, methodList, listTests});
 console.log(result?"PASSED ALL TESTS":"");
 
 
