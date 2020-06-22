@@ -235,7 +235,7 @@ const helpActual = docList => (queryString = '') => {
 	return outList;
 };
 
-const testActual = testList => (args) => {
+const testActual = testList => (args={}) => {
 	return testList.reduce((result, test) => {
 		if (typeof test == 'function') {
 			result = test(args) && result; //executes the framework testItem.test() above
