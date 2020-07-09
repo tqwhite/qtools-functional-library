@@ -4,6 +4,7 @@
   "description": "Useful additions to JS prototypes to facilliate chainable, functional (mostly) style. Also make life more convenient.\"",
   "main": "qtools-functional-library.js",
   "scripts": {
+    "sample": "node test.js -listTests -logErrors --methodList=qtClone,qtToString,qtPop",
     "test": "node test.js -verbose -logErrors",
     "quiet": "node test.js -listTests -logErrors"
   },
