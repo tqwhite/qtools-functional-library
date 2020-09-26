@@ -63,9 +63,9 @@ const commonFunctions = {
 	},
 
 	callerName: (calledFromQtLib = false) => {
-		const index = calledFromQtLib ? 3 : 1; //the 1 might need adjusting once this is made available to applications
+		const index = calledFromQtLib ? 3 : 2; //the 1 might need adjusting once this is made available to applications
 		return new Error().stack
-			.split(/\n/)[3]
+			.split(/\n/)[index]
 			.trim()
 			.replace(/at new moduleFunction/, "called from")
 			.replace(/Object\.<anonymous>/, 'not_in_function');
