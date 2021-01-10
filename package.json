@@ -1,6 +1,6 @@
 {
   "name": "qtools-functional-library",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Useful additions to JS prototypes to facilliate chainable, functional (mostly) style. Also make life more convenient.\"",
   "main": "qtools-functional-library.js",
   "scripts": {
