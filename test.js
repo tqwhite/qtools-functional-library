@@ -21,6 +21,7 @@ const methodList=process.argv
 
 const result=qt.test({logErrors, verbose, methodList, listTests});
 console.log(result?"PASSED ALL TESTS":"");
+console.log("note: npm test runs all tests. For subset, type, eg, node test.js -listTests -logErrors -verbose --methodList=qtNumberKeysToArray")
 
 
 process.exit(result?0:1);
