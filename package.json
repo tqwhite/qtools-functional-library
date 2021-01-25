@@ -1,11 +1,12 @@
 {
   "name": "qtools-functional-library",
-  "version": "1.0.9",
+  "version": "1.1.1",
   "description": "Useful additions to JS prototypes to facilliate chainable, functional (mostly) style. Also make life more convenient.\"",
   "main": "qtools-functional-library.js",
   "scripts": {
     "sample": "node test.js -listTests -logErrors -verbose --methodList=qtClone,qtToString,qtPop",
     "sample2": "node test.js -listTests -logErrors --methodList=qtClone,qtToString,qtPop",
+    "logTest": "node --trace-uncaught test.js -listTests -logErrors --methodList=qtLog",
     "test": "node test.js -verbose -logErrors",
     "quiet": "node test.js -listTests -logErrors"
   },

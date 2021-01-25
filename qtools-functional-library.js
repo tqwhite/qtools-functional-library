@@ -62,8 +62,14 @@ const commonFunctions = {
 		};
 	},
 
-	callerName: (calledFromQtLib = false) => {
-		const index = calledFromQtLib ? 3 : 2; //the 1 might need adjusting once this is made available to applications
+	callerName: (calledFromQtLib = false, options={}) => {
+		if (typeof(options)!='object'){
+			throw(`qtools-functional-library.js internal error: options must be an object, got '${options}'`);
+		}
+		options.suffixCallStackDepth=options.suffixCallStackDepth?options.suffixCallStackDepth:3;
+	
+
+		const index = calledFromQtLib ? options.suffixCallStackDepth : 2; //the 1 might need adjusting once this is made available to applications
 		return new Error().stack
 			.split(/\n/)[index]
 			.trim()
@@ -221,6 +227,7 @@ const addMorePrototypes = () => {
 addMorePrototypes();
 
 const helpActual = docList => (queryString = '') => {
+	//someday turn this into a report instead of a JSON dump, add support for item.suppressHelpListing for qtLog_AddCallableMethods
 	let outList;
 	if (!queryString) {
 		outList = docList;
@@ -244,6 +251,8 @@ const testActual = testList => (args={}) => {
 		return result;
 	}, true);
 };
+
+commonFunctions.qtLog_AddCallableMethods("what part of 'not for civilian use' is unclear?");
 
 commonFunctions.help = helpActual(docList);
 commonFunctions.test = testActual(testList);
