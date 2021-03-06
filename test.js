@@ -1,7 +1,7 @@
 #!/usr/local/bin/node
 'use strict';
 
-const qt = require('qtools-functional-library');
+const qt = require('./qtools-functional-library.js');
 
 //console.dir(qt.help());
 const verbose=process.argv.filter(item=>item.match(/verbose/i))[0]?true:false
