@@ -20,4 +20,9 @@ Most of the functions included in this library (except, eg, qt.log()) are implem
 - qtools-to-key-value-array
 - qtools-to-string
 
+NEW:
+
+- qtools-select-properties
+- qtools-map-properties
+
 DESCRIPTION
