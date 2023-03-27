@@ -17,7 +17,7 @@ const one=demo
     .qtGetSurePath('a.b')
     .qtDump();//produces 'Hi from b [thisFilename.js]'
 
-console.log(one); //produces 'Hi from b'
+console.log(one); //produces '[object Object]'
 ```
 
 ### **Non-chain utilities:**
