@@ -75,4 +75,18 @@ console.log(one); //produces '[object Object]'
 
 - **qtIterate**: Operates on a number. EG, (5).qtStart(7).qtIncrement(3).qtIterate(item=>item*100)
 
-DESCRIPTION
+### **Output:**
+
+1.1.16 - fixed bug where intermediate path element could be undefined and cause a crash.
+
+### **Other Cool Qtools**
+
+[qtools-asynchronous-pipe-plus](https://www.npmjs.com/package/qtools-asynchronous-pipe-plus)
+[qtools-config-file-processor](https://www.npmjs.com/package/qtools-config-file-processor)
+[qtools-format-columns](https://www.npmjs.com/package/qtools-format-columns)
+[qtools-functional-library](https://www.npmjs.com/package/qtools-functional-library)
+[qtools-object-flattener](https://www.npmjs.com/package/qtools-object-flattener)
+[qtools-parse-command-line](https://www.npmjs.com/package/qtools-parse-command-line)
+[qtools-secure-container](https://www.npmjs.com/package/qtools-secure-container)
+[qtools-template-replace-for-files](https://www.npmjs.com/package/qtools-template-replace-for-files)
+[qtools-transform-text](https://www.npmjs.com/package/qtools-transform-text)
