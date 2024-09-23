@@ -27,6 +27,8 @@ console.log(one); //produces '[object Object]'
 qtPassThrough <u>no longer</u> *always* returns the inbound 'this'. If the supplied function
 returns a value, that is passed on. This way, any ad hoc function can affect the result chain.
 
+Version 2.0.1 9/23/24 - removed deep clone in favor of spread operator (which didn't exist when this was written). Should have no effect on functionality.
+
 EG,
 
 ```
