@@ -1,6 +1,6 @@
 {
   "name": "qtools-template-replace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Replaces <!tag!> tags based on properties in objects.",
   "main": "qtools-template-replace.js",
   "scripts": {
