@@ -94,6 +94,7 @@ EG,
 
 ### **Output:**
 
+2.0.2 - fixed old error where qtFirst() did not work at all.
 1.1.16 - fixed bug where intermediate path element could be undefined and cause a crash.
 
 ### **Other Cool Qtools**
