@@ -1,6 +1,6 @@
 {
   "name": "qtools-functional-library",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Useful additions to JS prototypes to facilliate chainable, functional (mostly) style. Also make life more convenient.\"",
   "main": "qtools-functional-library.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/tqwhite/qtools-functional-library.git"
   },
   "author": "TQ White II",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tqwhite/qtools-functional-library/issues"
   },
@@ -24,12 +24,6 @@
   "keywords": [
     "functional",
     "chain"
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/evangelion1204/multi-ini/blob/master/LICENSE"
-    }
   ],
   "pkg":{
   	"assets":"./lib"

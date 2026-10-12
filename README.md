@@ -94,6 +94,7 @@ EG,
 
 ### **Output:**
 
+2.0.5 - License changed to MIT (was ISC). No code changes.
 2.0.3 - fixed old error where qtFirst() did not work at all.
 1.1.16 - fixed bug where intermediate path element could be undefined and cause a crash.
 
